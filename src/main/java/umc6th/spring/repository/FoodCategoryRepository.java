@@ -4,4 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import umc6th.spring.domain.FoodCategory;
 
 public interface FoodCategoryRepository extends JpaRepository<FoodCategory, Long> {
+
+    boolean existsById(Long id);
 }
