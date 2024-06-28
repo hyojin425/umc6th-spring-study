@@ -3,6 +3,8 @@ package umc6th.spring.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
 import umc6th.spring.domain.common.BaseEntity;
 import umc6th.spring.domain.mapping.MemberMission;
 
@@ -11,6 +13,8 @@ import java.util.List;
 
 @Entity
 @Getter
+@DynamicUpdate
+@DynamicInsert
 @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
