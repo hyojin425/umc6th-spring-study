@@ -29,7 +29,10 @@ public enum ErrorStatus implements BaseErrorCode {
     // Food_Category Error
     FOOD_CATEGORY_NOT_FOUND(HttpStatus.BAD_REQUEST, "FOOD_CATEGORY4001", "음식 카테고리가 없습니다."),
     //Store Error
-    STORE_NOT_FOUND(HttpStatus.BAD_REQUEST, "STORE4001", "가게를 찾을 수 없습니다.");
+    STORE_NOT_FOUND(HttpStatus.BAD_REQUEST, "STORE4001", "가게를 찾을 수 없습니다."),
+    //Mission Error
+    MISSION_NOT_FOUND(HttpStatus.BAD_REQUEST, "MISSION4001", "미션을 찾을 수 없습니다."),
+    MEMBER_MISSION_EXISTS(HttpStatus.BAD_REQUEST, "MISSION4001", "이미 도전중인 미션입니다.");
 
     private final HttpStatus httpStatus;
     private final String code;
