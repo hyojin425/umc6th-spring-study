@@ -12,13 +12,12 @@ import umc6th.spring.web.dto.missionDTO.MissionRequestDTO;
 
 @Service
 @RequiredArgsConstructor
-@Transactional(readOnly = true)
+@Transactional
 public class MissionCommandServiceImpl implements MissionCommandService{
 
     private final StoreRepository storeRepository;
     private final MissionRepository missionRepository;
     @Override
-    @Transactional
     public Mission missionRegister(MissionRequestDTO.MissionRegisterDto request, Long storeId){
 
         Store store = storeRepository.getById(storeId);

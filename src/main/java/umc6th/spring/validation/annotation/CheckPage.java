@@ -2,17 +2,17 @@ package umc6th.spring.validation.annotation;
 
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
-import umc6th.spring.validation.validator.StoreExistValidator;
+import umc6th.spring.validation.validator.CheckPageValidator;
 
 import java.lang.annotation.*;
 
 @Documented
-@Constraint(validatedBy = StoreExistValidator.class)
+@Constraint(validatedBy = CheckPageValidator.class)
 @Target( { ElementType.METHOD, ElementType.FIELD, ElementType.PARAMETER })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ExistStore {
+public @interface CheckPage {
 
-    String message() default "해당하는 가게가 존재하지 않습니당.";
+    String message() default "페이지 범위를 벗어났습니다.";
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
 }
